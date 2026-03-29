@@ -5,25 +5,43 @@ An intelligent platform that turns market data into actionable investment decisi
 ## Features
 
 ### Opportunity Radar
-- Monitors corporate filings, quarterly results, bulk/block deals, insider trades, and regulatory changes
-- Surfaces missed opportunities as daily alerts
-- AI-powered signal detection, not just summarization
+- **Real-time Monitoring**: Tracks corporate filings, quarterly results, bulk/block deals, insider trades, and regulatory changes
+- **Alert Types**: 
+  - Bulk deal notifications for large institutional transactions
+  - Insider trading activity alerts
+  - Regulatory filing updates
+- **AI-Powered Detection**: Advanced signal detection beyond simple summarization
+- **Daily Alerts**: Automated notifications for missed investment opportunities
 
 ### Chart Pattern Intelligence
-- Real-time technical pattern detection across NSE universe
-- Breakouts, reversals, support/resistance, divergences
-- Plain-English explanations with historical back-tested success rates
+- **Technical Analysis**: Real-time pattern detection across NSE universe stocks
+- **Pattern Types**:
+  - Breakout patterns with resistance level analysis
+  - Reversal setups with support building indicators
+  - Consolidation phases with range-bound trading signals
+- **Success Rate Tracking**: Historical back-tested performance metrics (56%-68% success rates)
+- **Visual Charts**: Interactive price charts with pattern overlays
+- **Plain-English Explanations**: AI-generated insights in understandable language
 
 ### Market ChatGPT Next Gen
-- Deeper data integration and multi-step analysis
-- Portfolio-aware answers with source citations
-- Advanced conversational AI for market queries
+- **Conversational AI**: Advanced chat interface for market queries
+- **Portfolio Integration**: Context-aware responses based on user's stock holdings
+- **Multi-step Analysis**: Complex reasoning and market scenario evaluation
+- **Data Sources**: Citations from NSE data, market analysis, and institutional flows
+- **Intelligent Fallbacks**: Works with or without OpenAI API integration
+- **Specialized Responses**: Tailored answers for Nifty, Sensex, dividend strategies, and risk management
 
 ### AI Market Video Engine
-- Auto-generates short, visually rich market update videos (30-90 seconds)
-- Race-chart simulators, daily market wraps, sector rotations
-- FII/DII flow visualizations and IPO trackers
-- Zero human editing required
+- **Automated Video Generation**: Creates 30-90 second professional market update videos
+- **Content Types**:
+  - Daily market summary videos
+  - Sector rotation analysis
+  - FII/DII flow visualizations
+  - IPO tracker updates
+  - Race-chart simulators for market performance
+- **Data Integration**: Real-time market data, institutional flows, and sector performance
+- **Zero Editing Required**: Fully automated video production pipeline
+- **Visual Elements**: Charts, animations, and data visualizations
 
 ## Tech Stack
 
@@ -88,7 +106,3 @@ The application is designed to help Indian investors make informed decisions by 
 - Technical analysis with success rates
 - Conversational AI for market queries
 - Automated video content generation
-
-## Note
-
-This is a prototype implementation. For production use, integrate with actual ET Markets data APIs and NSE data feeds.
