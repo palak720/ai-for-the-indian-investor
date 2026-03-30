@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import yfinance as yf
 import pandas as pd
@@ -8,8 +9,14 @@ import random
 from datetime import datetime, timedelta
 import openai
 import os
+from pathlib import Path
 
 app = FastAPI(title="AI for Indian Investor Backend")
+
+# Serve frontend built files if available (monorepo single deploy)
+frontend_dist = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+if frontend_dist.exists():
+    app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="static")
 
 # CORS for frontend
 app.add_middleware(

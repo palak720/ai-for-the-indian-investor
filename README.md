@@ -106,3 +106,56 @@ The application is designed to help Indian investors make informed decisions by 
 - Technical analysis with success rates
 - Conversational AI for market queries
 - Automated video content generation
+
+## Deployment
+
+### ✅ Frontend Deployed
+The frontend is now live at: **https://frontend-oxqo5v29a-palak720s-projects.vercel.app**
+
+### 🔗 Full Local Convenience (one command)
+From root folder:
+```bash
+npm install
+npm run dev
+```
+This uses root-level `concurrently` to start both backend and frontend together.
+
+### 💻 Root scripts (added)
+- `package.json` in root
+- `scripts.dev`: starts backend + frontend concurrently
+- `scripts.install-all`: installs both subprojects
+
+### Backend Deployment (Next Steps)
+
+Since the backend uses FastAPI (Python), deploy it separately:
+
+#### Option 1: Railway (Recommended)
+1. Create account at [Railway.app](https://railway.app)
+2. Connect your GitHub repository
+3. Railway will auto-detect Python and deploy the backend
+4. Set environment variable: `OPENAI_API_KEY=your-key-here`
+5. Get the deployment URL (e.g., `https://your-app.railway.app`)
+6. Update Vercel environment variable: `VITE_API_BASE=https://your-app.railway.app`
+
+#### Option 2: Render
+1. Create account at [Render.com](https://render.com)
+2. Create a new Web Service from your GitHub repo
+3. Set build command: `pip install -r requirements.txt`
+4. Set start command: `python main.py`
+5. Set environment variable: `OPENAI_API_KEY`
+6. Deploy and get the URL
+
+#### Option 3: Heroku
+1. Install Heroku CLI: `npm install -g heroku`
+2. Login: `heroku login`
+3. Create app: `heroku create your-app-name`
+4. Set environment: `heroku config:set OPENAI_API_KEY=your-key-here`
+5. Deploy: `git push heroku main`
+
+### Environment Variables
+
+**Backend**:
+- `OPENAI_API_KEY`: Your OpenAI API key (optional, app works without it)
+
+**Frontend** (Set in Vercel dashboard):
+- `VITE_API_BASE`: Backend API URL (currently set to localhost for development)

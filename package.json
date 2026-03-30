@@ -1,0 +1,11 @@
+{
+  "name": "ai-for-the-indian-investor",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd backend && python main.py\" \"cd frontend && npm run dev\"",
+    "install-all": "npm --prefix frontend install && pip install -r backend/requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
